@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recomendador estilo Netflix con SVD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Sistema de Recomendación estilo Netflix</h1>
+  <p>Usamos una matriz de gustos de usuarios y aplicamos SVD para predecir calificaciones faltantes.</p>
+
+  <div class="matrix-container">
+    <h2>Matriz M (Usuarios x Películas)</h2>
+    <table id="matrix">
+      <tr>
+        <th></th><th>Película A</th><th>Película B</th><th>Película C</th>
+      </tr>
+      <tr><td>Usuario 1</td><td>5</td><td>?</td><td>4</td></tr>
+      <tr><td>Usuario 2</td><td>?</td><td>4</td><td>?</td></tr>
+      <tr><td>Usuario 3</td><td>1</td><td>?</td><td>2</td></tr>
+    </table>
+  </div>
+
+  <button onclick="aplicarSVD()">Predecir Calificaciones</button>
+
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
